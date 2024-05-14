@@ -5,8 +5,8 @@ import (
 	"os"
 	"runtime"
 
+	"github.com/hasanbal/goctl-swagger-custom/action"
 	"github.com/urfave/cli/v2"
-	"github.com/zeromicro/goctl-swagger/action"
 )
 
 var (
@@ -44,6 +44,6 @@ func main() {
 	app.Version = fmt.Sprintf("%s %s/%s", version, runtime.GOOS, runtime.GOARCH)
 	app.Commands = commands
 	if err := app.Run(os.Args); err != nil {
-		fmt.Printf("goctl-swagger: %+v\n", err)
+		fmt.Printf("goctl-swagger-custom: %+v\n", err)
 	}
 }
